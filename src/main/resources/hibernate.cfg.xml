@@ -18,11 +18,13 @@
         <property name="hibernate.format_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!-- Activation du cache de second niveau -->
         <property name="hibernate.cache.use_second_level_cache">false</property>
         <mapping class="entity.Client"/>
         <mapping class="entity.Voiture"/>
         <mapping class="entity.Parc"/>
         <mapping class="entity.DateAssociation"/>
+        <mapping class="entity.User"/>
+        <mapping class="entity.RentalRequest"/>
+        <mapping class="entity.Notification"/>
     </session-factory>
 </hibernate-configuration>

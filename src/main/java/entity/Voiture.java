@@ -26,6 +26,9 @@ public class Voiture {
 
     private String imageUrl;
 
+    @Column(name = "disponible")
+    private Boolean disponible = true;
+
     public Integer getId() {
         return id;
     }
@@ -80,5 +83,18 @@ public class Voiture {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public Boolean getDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(Boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    // Méthode utilitaire pour vérifier si la voiture est disponible
+    public boolean isDisponible() {
+        return disponible != null && disponible;
     }
 }
